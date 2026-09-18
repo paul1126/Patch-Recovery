@@ -41,6 +41,7 @@ jobs:
         mv ../r-patched.img recovery.img
         tar cvf fastbootd-recovery.tar recovery.img
         md5sum -t fastbootd-recovery.tar >> fastbootd-recovery.tar
+        mkdir output && cd output
         mv fastbootd-recovery.tar fastbootd-recovery.tar.md5
 
     - name: Upload to Release
